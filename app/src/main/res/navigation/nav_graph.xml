@@ -20,4 +20,9 @@
         android:name="com.example.vocabularymanagement.views.register.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.vocabularymanagement.views.setting.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" />
 </navigation>

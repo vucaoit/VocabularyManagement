@@ -5,5 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".views.main.MainActivity">
+<fragment
+    android:id="@+id/main_nav_host_fragment"
+    android:name="androidx.navigation.fragment.NavHostFragment"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:defaultNavHost="true"
+    app:navGraph="@navigation/nav_graph"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toTopOf="@+id/main_bottom_navigation"
+    />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/main_bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:menu="@menu/menu_nav_graph_item"
+        app:layout_constraintTop_toBottomOf="@+id/main_nav_host_fragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
 
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
