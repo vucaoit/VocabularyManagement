@@ -1,14 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#6500BCD4"
     tools:context=".views.register.RegisterFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:id="@+id/register_linearlayout_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/register_linearlayout_content"
+        app:layout_constraintVertical_chainStyle="spread"
+        android:paddingVertical="20dp"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Account"
+            android:textSize="40dp"
+            android:textColor="@color/white"
+            android:textStyle="bold|italic"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/register_linearlayout_content"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_linearlayout_header"
+        app:layout_constraintBottom_toTopOf="@+id/register_btn_create"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:hint="Email"
+            android:background="@drawable/shape_edit_text"
+            android:paddingHorizontal="20dp"
+            android:drawableLeft="@drawable/ic_baseline_email_24"
+            android:drawablePadding="5dp"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:hint="Your name"
+            android:background="@drawable/shape_edit_text"
+            android:paddingHorizontal="20dp"
+            android:drawableLeft="@drawable/ic_person"
+            android:drawablePadding="5dp"
+            android:singleLine="true"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:hint="Password"
+            android:background="@drawable/shape_edit_text"
+            android:paddingHorizontal="20dp"
+            android:drawableLeft="@drawable/ic_lock"
+            android:drawableRight="@drawable/ic_eye_disable"
+            android:drawablePadding="5dp"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:hint="Password confirm"
+            android:background="@drawable/shape_edit_text"
+            android:paddingHorizontal="20dp"
+            android:drawableLeft="@drawable/ic_lock"
+            android:drawableRight="@drawable/ic_eye_disable"
+            android:drawablePadding="5dp"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            />
+    </LinearLayout>
+    <Button
+        android:id="@+id/register_btn_create"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:text="Create"
+        android:textSize="20dp"
+        android:textColor="#9E00BCD4"
+        android:textStyle="bold"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        app:layout_constraintTop_toBottomOf="@+id/register_linearlayout_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/register_linearlayout_footer"
+        android:drawableRight="@drawable/ic_arrow_right"
+        />
+    <LinearLayout
+        android:id="@+id/register_linearlayout_footer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/register_btn_create"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Have an account?"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            />
+        <Button
+            android:id="@+id/register_btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:background="@android:color/transparent"
+            android:textSize="20dp"
+            android:padding="0dp"
+            android:textAllCaps="false"
+            android:textColor="#3A3A3A"
+            />
+    </LinearLayout>
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
