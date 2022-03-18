@@ -6,7 +6,7 @@
         android:title="home" />
     <item
         android:id="@+id/settingFragment"
-        android:icon="@drawable/ic_nav_home"
+        android:icon="@drawable/ic_nav_setting"
         android:title="home" />
 
 </menu>
